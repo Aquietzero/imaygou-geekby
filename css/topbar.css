@@ -1,0 +1,37 @@
+.topbar {
+  height: 47px;
+  width: 100%;
+  background-image: url('../img/topbar-bg@2x.png');
+  background-size: 1px 47px;
+  position: fixed;
+  top: 0;
+  z-index: 1000000000000;
+}
+
+.topbar-wrapper {
+  width: 300px;
+  margin: auto;
+  padding: 0 10px;
+  line-height: 47px;
+}
+
+.topbar a {
+  color: #666;
+}
+
+.topbar .logo img {
+  width: 55px;
+  height: 15px;
+  vertical-align: text-bottom;
+}
+
+.topbar .cart {
+  float: right;
+  margin-right: 10px;
+}
+
+.topbar .cart img {
+  width: 17px;
+  height: 15px;
+  vertical-align: text-bottom;
+}

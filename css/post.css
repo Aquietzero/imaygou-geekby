@@ -1,0 +1,183 @@
+.slogan {
+  text-align: center;
+}
+
+.slogan img {
+  width: 91px;
+  height: 21px;
+}
+
+.posts {
+  width: 300px;
+  margin: auto;
+  /* background-color: blue; */
+}
+
+.post {
+  position: relative;
+  /* background-color: white; */
+  margin-bottom: 20px;
+}
+
+.post-main {
+  position: relative;
+  width: 246px;
+  height: 246px;
+  padding: 16px;
+  margin: auto;
+  z-index: 100;
+}
+.post-main-wrapper {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.post-main .image {
+  position: absolute;
+  bottom: 55px;
+}
+
+.post-main .image img {
+  width: 246px;
+}
+
+.post-main .title {
+  width: 246px;
+  position: absolute;
+  bottom: 35px;
+  text-align: center;
+  color: #666;
+}
+
+.post-main .border {
+  position: absolute;
+}
+
+.post-main .border.top {
+  width: 246px;
+  height: 16px;
+  top: 0;
+  left: 16px;
+  background-image: url('../img/post-top@2x.png');
+  background-size: 246px 16px;
+}
+.post-main .border.left {
+  width: 16px;
+  height: 278px;
+  top: 0;
+  left: 0;
+  background-image: url('../img/post-left@2x.png');
+  background-size: 16px 278px;
+}
+.post-main .border.right {
+  width: 16px;
+  height: 278px;
+  top: 0;
+  right: 0;
+  background-image: url('../img/post-right@2x.png');
+  background-size: 16px 278px;
+}
+.post-main .border.bottom {
+  width: 246px;
+  height: 16px;
+  bottom: 0;
+  left: 16px;
+  background-image: url('../img/post-bottom@2x.png');
+  background-size: 246px 16px;
+}
+
+
+/* post bar */
+.post-bar {
+  position: relative;
+  width: 282px;
+  height: 90px;
+  margin: -40px auto 0 auto;
+  background-image: url('../img/hot-cover@2x.png');
+  background-size: 282px 90px;
+  z-index: 1000;
+}
+
+.post-bar .badge {
+  color: #990f0f; 
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  text-align: center;
+}
+
+.post-bar .badge p {
+  margin: 0;
+  line-height: 1.2em;
+  font-size: 0.9em;
+}
+
+.post-bar .prices {
+  color: white;
+  position: absolute;
+  top: 15px;
+  left: 65px;
+}
+
+.post-bar .prices p {
+  vertical-align: middle;
+  line-height: 1.4em;
+  font-size: 1.1em;
+}
+
+.post-bar .prices img {
+  width: 12px;
+  height: 12px;
+}
+
+.post-bar .rob-button {
+  position: absolute;
+  right: 10px;
+  top: 23px;
+  width: 60px;
+  height: 44px;
+  background-image: url('../img/rob@2x.png');
+  background-size: 60px 44px;
+}
+
+
+/* post info */
+.post-info {
+  position: absolute;
+  vertical-align: middle;
+  color: #999;
+  bottom: 5px;
+  z-index: 10000;
+  width: 100%;
+  text-align: center;
+}
+
+.post-info img {
+  width: 12px;
+  height: 12px;
+}
+
+
+
+/* post triangle */
+.post-triangle {
+  position: absolute;
+  top: 0;
+  right: 11px;
+  z-index: 10000;
+}
+
+.post-triangle.hot {
+  width: 48px;
+  height: 48px;
+  background-image: url('../img/triangle-hot@2x.png');
+  background-size: 48px 48px;
+}
+.post-triangle.usonly {
+  width: 48px;
+  height: 48px;
+  background-image: url('../img/triangle-usonly@2x.png');
+  background-size: 48px 48px;
+}

@@ -1,0 +1,19 @@
+html {
+  background-color: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  position: relative;
+}
+
+.content {
+  width: 320px;
+  min-height: 700px;
+  margin: 60px auto 20px auto;
+}
+

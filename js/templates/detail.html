@@ -1,0 +1,53 @@
+<div class="post-detail">
+  <div class="title">
+    <p class="main-title"><%= title %></p>
+    <p class="sub-title"><%= sub_title %></p>
+  </div>
+  <div class="post-image">
+    <img src="<%= images[0] %>">
+  </div>
+  <!--
+  <div class="thumbnail box">
+    <div class="current" class="imagebox"><img src=""></div>
+    <div class="imagebox"><img src=""></div>
+    <div class="imagebox"><img src=""></div>
+  </div>
+  -->
+  <div class="buy">
+    <div>
+      <img class="small-icon" src="/img/icon-us@2x.png">
+      <span>￥<%= price_us %></span><span>货源ebay</span>
+    </div>
+    <div>
+      <img class="small-icon" src="/img/icon-china@2x.png">
+      <% _.each(price_ref, function (ref) { %>
+        <span><%= ref.mall %>￥<%= ref.price %></span>
+      <% }) %>
+    </div>
+    <div class="operations">
+      <span class="button buy-button">购买</span>
+      <span class="button share-button">分享</span>
+    </div>
+  </div>
+
+  <div class="section desc">
+    <div class="section-title">详细介绍</div>
+    <p class="section-content"><%= description %></p>
+  </div>
+
+  <div class="section spec">
+    <p class="section-title">规格</p>
+    <ul class="section-content">
+      <% _.each(detail, function (line) { %>
+        <li><%= line %></li>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="section deal-info">
+    <img class="small-icon" src="/img/icon-view@2x.png">
+    <span><%= view_num %></span>
+    <img class="small-icon" src="/img/icon-shopped@2x.png">
+    <span><%= buy_num %></span>
+    <span></span>
+  </div>
+</div>
