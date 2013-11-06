@@ -29,6 +29,7 @@ define(function (require) {
     },
 
     parse: function (res) {
+      res.item.price_us_in_RMB = res.item.price_us_in_RMB.toFixed(0);
       return res.item;
     }
   });
