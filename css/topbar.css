@@ -5,6 +5,7 @@
   background-size: 1px 47px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000000000000;
 }
 
@@ -25,6 +26,11 @@
   vertical-align: text-bottom;
 }
 
+.topbar .logo img.back-image {
+  width: 17px;
+  height: 15px;
+}
+
 .topbar .cart {
   float: right;
 }
@@ -33,4 +39,15 @@
   width: 17px;
   height: 15px;
   vertical-align: text-bottom;
+}
+
+.topbar .button-wrapper {
+  float: right;
+}
+
+.topbar .button {
+  color: white;
+  background-color: #385fd8;
+  border-radius: 5px;
+  padding: 5px 10px;
 }

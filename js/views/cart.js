@@ -3,6 +3,7 @@ define(function (require) {
   var _               = require('underscore');
   var Backbone        = require('backbone');
   var EntryView       = require('views/entry');
+  var AddressView     = require('views/address');
   var cart            = require('globals/cart');
   var cartTemplate    = require('text!templates/cart.html');
   var contactTemplate = require('text!templates/contact.html');
@@ -14,7 +15,8 @@ define(function (require) {
     },
 
     events: {
-      'click .payment-button': 'editContact'
+      'click .payment-button': 'editContact',
+      'click .edit-address': 'editAddress'
     },
 
     initialize: function () {
@@ -65,6 +67,12 @@ define(function (require) {
     editContact: function () {
       this.state = 'contact';
       this.renderContact();
+    },
+
+    editAddress: function () {
+      this.state = 'address';
+      var addressView = new AddressView();
+      this.$el.html(addressView.render().el);
     }
   });
 

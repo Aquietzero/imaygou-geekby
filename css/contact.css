@@ -1,19 +1,27 @@
-
-.personal-info {
-  width: 300px;
-  border-radius: 10px;
-  -webkit-box-shadow:0 0 8px #dddddd;
-  -moz-box-shadow:0 0 8px #dddddd;
-  background-color: #ffffff;
-  padding-bottom: 20px;
-  padding-top: 4px;
+.contact {
+  text-align: center;
 }
 
-.personal-info .control {
-  margin: 20px 30px 20px 30px;
-  width: 200px;
-  color: #999999;
-  font-size: 1.1em;
+.personal-info {
+  margin: auto;
+  width: 240px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #ddd;
+  -moz-box-shadow: 0 0 8px #ddd;
+  -webkit-box-shadow: 0 0 8px #ddd;
+  background-color: #fff;
+  text-align: left;
+}
+
+.contact .control {
+  width: 100%;
+  color: #999;
+  margin: 10px 0;
+}
+
+.contact .control p {
+  line-height: 1.5em;
 }
 
 .personal-info input {
@@ -28,38 +36,31 @@
 
 .personal-info input:focus {
   border-radius: 3px;
-  -webkit-box-shadow:0 0 8px #7898ff;
-  -moz-box-shadow:0 0 8px #7898ff;
+  box-shadow: 0 0 8px #7898ff;
+  -moz-box-shadow: 0 0 8px #7898ff;
+  -webkit-box-shadow: 0 0 8px #7898ff;
   border: 1px solid #395fd9;
 }
 
 .address {
-  margin-top: 30px;
-  width: 300px;
+  width: 240px;
+  padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow:0 0 8px #dddddd;
-  -moz-box-shadow:0 0 8px #dddddd;
-  background-color: #ffffff;
-  padding-bottom: 20px;
-  padding-top: 4px;
-}
-
-.address .control {
-  margin: 20px 30px 20px 30px;
-  width: 200px;
-  color: #999999;
-  font-size: 1.1em;
+  margin: 20px auto;
+  text-align: left;
+  box-shadow: 0 0 8px #ddd;
+  -moz-box-shadow: 0 0 8px #ddd;
+  -webkit-box-shadow: 0 0 8px #ddd;
+  background-color: #fff;
 }
 
 .address .button {
   border-radius: 3px;
-  width: 240px;
-  height: 40px;
-  margin-top: 10px;
-  padding-left: 1px;
   background-color: #395fd9;
   text-align: center;
-  line-height: 40px;
-  font-size: bolder;
-  color: #ffffff;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 0;
+  margin-top: 20px;
+  cursor: pointer;
 }
