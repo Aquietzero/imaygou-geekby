@@ -24,10 +24,10 @@ define(function (require) {
       var $selection = this.$('.buy-selection');
 
       if ($btn.hasClass('selected')) {
-        $selection.slideUp();
+        $selection.hide();
         $btn.removeClass('selected');
       } else {
-        $selection.slideDown();
+        $selection.show();
         $btn.addClass('selected');
       }
     },
@@ -66,6 +66,9 @@ define(function (require) {
           self.$el.html(self.template(self.model.attributes));
         }
       })
+
+      $(document).scrollTop(0);
+
       return this;
     }
   });

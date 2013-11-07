@@ -7,7 +7,6 @@ define(function (require) {
   var template  = require('text!templates/cart.html');
 
   var CartView = Backbone.View.extend({
-    className: 'cart',
     template: _.template(template),
 
     initialize: function () {
@@ -21,11 +20,18 @@ define(function (require) {
       cart.fetch({
         reset: true,
         success: function () {
-          console.log(cart);
           cart.get('posts').each(self.addOne, self);
+          self.renderSummary();
         }
       });
+
+      $(document).scrollTop(0);
+
       return this;
+    },
+
+    renderSummary: function () {
+      this.$('.summary .amount').html('￥' + cart.getSummary().price);
     },
 
     addOne: function (post) {

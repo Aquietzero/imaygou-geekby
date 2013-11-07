@@ -1,10 +1,11 @@
 .post-detail {
-  width: 278px;
+  width: 258px;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 10px;
-  -webkit-box-shadow:0 0 8px #cccccc;
-  -moz-box-shadow:0 0 8px #cccccc;
+  box-shadow: 0 0 8px #ccc;
+  -moz-box-shadow: 0 0 8px #ccc;
+  -webkit-box-shadow: 0 0 8px #ccc;
   margin: auto;
 }
 
@@ -53,7 +54,7 @@
 }
 
 .post-detail .post-image img {
-  width: 278px;
+  width: 258px;
 }
 
 .post-detail .buy {
@@ -91,7 +92,7 @@
 
 .buy-selection .selection-group .quantity {
   padding: 4px 6px;
-  margin: 0 2px;
+  margin: 0;
   font-weight: bold;
   color: #385fd8;
   background-color: transparent;

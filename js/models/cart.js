@@ -1,6 +1,7 @@
 define(function (require) {
   var Backbone = require('backbone');
-  var Posts = require('collections/posts');
+  var Post     = require('models/post');
+  var Posts    = require('collections/posts');
 
   var Cart = Backbone.Model.extend({
     defaults: {
@@ -12,7 +13,9 @@ define(function (require) {
 
     parse: function (res) {
       var cart = res.cart;
-      var posts = new Posts(cart.items);
+      var posts = new Posts(_.map(cart.items, function (item) {
+        return Post.prototype.parse({ item: item });
+      }));
       return { posts: posts };
     },
 
@@ -20,7 +23,7 @@ define(function (require) {
       var price = 0;
       var quantity = 0;
 
-      this.get('post').each(function (post) {
+      this.get('posts').each(function (post) {
         price += post.get('price_us_in_RMB') * post.get('quantity');
         quantity += post.get('quantity');
       });
