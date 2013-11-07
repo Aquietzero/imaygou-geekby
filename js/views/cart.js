@@ -16,7 +16,9 @@ define(function (require) {
 
     events: {
       'click .payment-button': 'editContact',
-      'click .edit-address': 'editAddress'
+      'click .edit-address': 'editAddress',
+      'click .contact-back': 'backToCart',
+      'click .address-back': 'backToContact'
     },
 
     initialize: function () {
@@ -46,12 +48,14 @@ define(function (require) {
     },
 
     renderCart: function () {
+      $(document).scrollTop(0);
       this.$el.html(this.templates[this.state]);
       cart.get('posts').each(this.addOne, this);
       this.renderSummary();
     },
 
     renderContact: function () {
+      $(document).scrollTop(0);
       this.$el.html(this.templates[this.state]);
     },
 
@@ -73,6 +77,18 @@ define(function (require) {
       this.state = 'address';
       var addressView = new AddressView();
       this.$el.html(addressView.render().el);
+    },
+
+    backToCart: function () {
+      this.state = 'cart';
+      this.renderCart();
+      return false;
+    },
+
+    backToContact: function () {
+      this.state = 'contact';
+      this.renderContact();
+      return false;
     }
   });
 

@@ -32,3 +32,29 @@
   background: url('../img/district-dropdown@2x.png') no-repeat right white;
   background-size: 76px 34.5px;
 }
+
+.street {
+  margin-top: 30px;
+}
+
+.street .label {
+  font-size: 0.9em;
+  color: #999;
+}
+
+.street input {
+  border-radius: 3px;
+  width: 218px;
+  padding: 5px 10px;
+  height: 35px;
+  border: 1px solid #ddd;
+  color: #395fd9;
+}
+
+.street input:focus {
+  border-radius: 3px;
+  box-shadow: 0 0 8px #7898ff;
+  -moz-box-shadow: 0 0 8px #7898ff;
+  -webkit-box-shadow: 0 0 8px #7898ff;
+  border: 1px solid #395fd9;
+}

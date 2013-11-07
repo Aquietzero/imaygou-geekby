@@ -30,7 +30,7 @@
   height: 35px;
   margin-top: 5px;
   padding-left: 10px;
-  border: 1px solid #999999;
+  border: 1px solid #ddd;
   color: #395fd9;
 }
 
@@ -54,13 +54,21 @@
   background-color: #fff;
 }
 
-.address .button {
+.address .edit-address {
+  font-weight: bold;
+  color: #395fd9;
+  text-align: right;
+  cursor: pointer;
+}
+
+.contact .button {
   border-radius: 3px;
   background-color: #395fd9;
+  width: 280px;
   text-align: center;
   font-weight: bold;
   color: #fff;
   padding: 5px 0;
-  margin-top: 20px;
+  margin: 20px auto;
   cursor: pointer;
 }

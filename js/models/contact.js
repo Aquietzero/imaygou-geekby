@@ -3,17 +3,21 @@ define(function (require) {
 
   var Contact = Backbone.Model.extend({
     defaults: {
-      phoneNumber: '',
-      customer: '',
-      address: {
-        province: '',
-        city: '',
-        district: '',
-        street: ''
+      userContact: {
+        phoneNumber: '',
+        customer: '',
+        address: {
+          province: '',
+          city: '',
+          district: '',
+          street: ''
+        }
+      },
+      hierarchy: {
       }
     }
   });
 
-  return Cart;
+  return Contact;
 });
 
