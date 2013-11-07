@@ -3,17 +3,13 @@ define(function (require) {
 
   var Contact = Backbone.Model.extend({
     defaults: {
-      userContact: {
-        phoneNumber: '',
-        customer: '',
-        address: {
-          province: '',
-          city: '',
-          district: '',
-          street: ''
-        }
-      },
-      hierarchy: {
+      phoneNumber: '',
+      customer: '',
+      address: {
+        province: '',
+        city: '',
+        district: '',
+        street: ''
       }
     }
   });

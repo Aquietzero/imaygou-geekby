@@ -32,6 +32,16 @@ define(function (require) {
         price: price,
         quantity: quantity
       };
+    },
+
+    getEntries: function () {
+      var entries = {};
+
+      this.get('posts').each(function (post) {
+        entries[post.get('id')] = post.get('quantity');
+      });
+
+      return entries;
     }
   });
 

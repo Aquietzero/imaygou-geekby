@@ -27,6 +27,7 @@ define(function (require) {
             var $option = $('<option value="' + province + '">' + province + '</options>');
             self.$('#province-selection').append($option);
           }, self);
+          self.$('#province-selection').prepend($('<option>'));
         }
       });
     },
@@ -69,6 +70,29 @@ define(function (require) {
           var $option = $('<option value="' + district + '">' + district + '</options>');
           self.$('#district-selection').append($option);
         }, self);
+      });
+    },
+
+    finishAddress: function () {
+      var $province = this.$('#province-selection option:selected');
+      var province = $province.val();
+
+      var $city = this.$('#city-selection option:selected');
+      var city = $city.val();
+      
+      var $district = this.$('#district-selection option:selected');
+      var district = $district.val();
+
+      var $street = this.$('.street input');
+      var street = $street.val();
+
+      var address = contact.get('address');
+
+      contact.set('address', {
+        province: province || address.province,
+        city: city || address.city,
+        district: district || address.district,
+        street: street || address.street
       });
     },
 

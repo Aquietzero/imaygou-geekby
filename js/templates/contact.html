@@ -11,22 +11,40 @@
   <div class="personal-info">
     <div class="phone control">
       <p>手机号码<span class="necessary">(必填)</span></p>
-      <input type="text">
-      <p>(将通过短信获取订单信息)</p>
+      <input class="phone-number" type="text" value="<%= contact.get('phoneNumber') %>" />
+      <p class="attention">(将通过短信获取订单信息)</p>
     </div>
     <div class="name control">
       <p>联系人(可选)</p>
-      <input type="text">
+      <input class="contact-user" type="text" value="<%= contact.get('contactUser') %>" />
     </div>
   </div>
   <div class="address">
     <div class="add control">
       <p>收货地址</p>
-      <p>(可稍后短信将地址发送给我们)</p>
+      <p class="attention">(可稍后短信将地址发送给我们)</p>
+      <% if (contact.get('address').province !== '') { %>
+        <% var province = contact.get('address').province %>
+        <% var city = contact.get('address').city %>
+        <% var district = contact.get('address').district %>
+        <% var street = contact.get('address').street %>
+        <div class="exist-address">
+          <p>
+            <span><%= province ? province : '' %></span>, 
+            <span><%= city ? city : '' %></span>, 
+            <span><%= district ? district : '' %></span>
+          </p>
+          <p>
+            <span><%= street ? street : '' %></span>
+          </p>
+        </div>
+      <% } %>
       <div class="edit-address">
-        选择地址
+        输入地址
       </div>
     </div>
+  </div>
+  <div class="errors">
   </div>
   <div class="button finish-contact">
     完成

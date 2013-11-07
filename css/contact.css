@@ -72,3 +72,16 @@
   margin: 20px auto;
   cursor: pointer;
 }
+
+.contact .attention {
+  font-size: 0.8em;
+  color: #bbb;
+}
+
+.contact .exist-address {
+  color: #395fd9;
+}
+
+.contact .errors {
+  color: #a00;
+}
