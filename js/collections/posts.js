@@ -16,7 +16,6 @@ define(function (require) {
     },
 
     parse: function (res) {
-      console.log(res);
       return _.map(res.items, function (item) {
         return { item: item };
       });

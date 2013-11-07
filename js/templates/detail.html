@@ -26,7 +26,21 @@
     </div>
     <div class="operations">
       <span class="button buy-button">购买</span>
+      <!--
       <span class="button share-button">分享</span>
+      -->
+    </div>
+    <div class="buy-selection">
+      <div class="selection-group">
+        <p class="group-title">请选择数量(限购8台)</p>
+        <div class="group-content">
+          <span class="quantity selected">1</span>
+          <% _.each('2345678'.split(''), function (quantity) { %>
+            <span class="quantity"><%= quantity %></span>
+          <% }) %>
+        </div>
+      </div>
+      <div class="button add-to-cart">加入购物车</div>
     </div>
   </div>
 

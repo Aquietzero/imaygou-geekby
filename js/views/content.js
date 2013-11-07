@@ -4,11 +4,13 @@ define(function (require) {
   var Backbone   = require('backbone');
   var IndexView  = require('views/index');
   var DetailView = require('views/detail');
+  var CartView   = require('views/cart');
 
   var ContentView = Backbone.View.extend({
     initialize: function () {
       this.indexView = new IndexView();
       this.detailView = new DetailView();
+      this.cartView = new CartView();
     },
 
     render: function (status, param1, param2) {
@@ -19,6 +21,9 @@ define(function (require) {
           break;
         case 'detail':
           this.detailView.setElement(this.$el).render(param1);
+          break;
+        case 'cart':
+          this.cartView.setElement(this.$el).render();
           break;
       }
       return this;

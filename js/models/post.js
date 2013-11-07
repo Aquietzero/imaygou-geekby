@@ -18,7 +18,8 @@ define(function (require) {
       view_num: 0,
       buy_num: 0,
 
-      post_type: 'NORMAL'
+      post_type: 'NORMAL',
+      quantity: 0
     },
 
     initialize: function () {
