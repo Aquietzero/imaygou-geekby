@@ -120,7 +120,8 @@ define(function (require) {
       this.backToContact();
     },
 
-    finishContact: function () {
+    finishContact: function (e) {
+      var $btn = $(e.currentTarget);
       var phoneNumber = contact.get('phoneNumber');
       
       if (!phoneNumber) {
@@ -146,7 +147,10 @@ define(function (require) {
           order: JSON.stringify(order)
         },
         success: function (res) {
-          console.log(res);
+          if (res.message === 'OK') {
+            $btn.html('订单已成功提交，请留意手机短信。');
+            cart.empty();
+          }
         }
       });
     }

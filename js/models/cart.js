@@ -19,6 +19,17 @@ define(function (require) {
       return { posts: posts };
     },
 
+    empty: function () {
+      var self = this;
+      $.ajax({
+        url: '/api/cart/empty',
+        type: 'get',
+        success: function () {
+          self.fetch({ reset: true });
+        }
+      });
+    },
+
     getSummary: function () {
       var price = 0;
       var quantity = 0;
