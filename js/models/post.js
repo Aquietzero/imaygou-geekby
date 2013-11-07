@@ -16,7 +16,7 @@ define(function (require) {
       description: '',
       detail: [],
       view_num: 0,
-      buy_num: 0,
+      order_num: 0,
 
       post_type: 'NORMAL',
       quantity: 0
