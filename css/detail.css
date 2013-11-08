@@ -57,6 +57,10 @@
   width: 258px;
 }
 
+.post-detail .desc img {
+  width: 100%;
+}
+
 .post-detail .buy {
   color: #999;
 }
