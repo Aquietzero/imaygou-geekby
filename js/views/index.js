@@ -4,6 +4,7 @@ define(function (require) {
   var Backbone  = require('backbone');
   var Posts     = require('collections/posts');
   var PostsView = require('views/posts');
+  var cart      = require('globals/cart');
   var template  = require('text!templates/index.html');
   var log       = require('log');
 
@@ -26,7 +27,7 @@ define(function (require) {
 
       var self = this;
 
-      this.$el.html(this.template());
+      this.$el.html(this.template({ cart: cart }));
       this.posts.fetch({
         reset: true,
         success: function () {

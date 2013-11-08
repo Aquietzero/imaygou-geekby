@@ -6,7 +6,11 @@ define(function (require) {
   var Cart = Backbone.Model.extend({
     defaults: {
       posts: new Posts(),
-      amount: 0
+      amount: 0,
+
+      // If there are any new updates, this field is set to be false.
+      // Every time user checks the cart, this field is set to be true.
+      isChecked: true
     },
 
     url: '/api/cart',

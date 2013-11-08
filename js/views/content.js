@@ -4,6 +4,7 @@ define(function (require) {
   var Backbone   = require('backbone');
   var IndexView  = require('views/index');
   var DetailView = require('views/detail');
+  var cart       = require('globals/cart');
   var CartView   = require('views/cart');
 
   var ContentView = Backbone.View.extend({
@@ -23,6 +24,7 @@ define(function (require) {
           this.detailView.setElement(this.$el).render(param1);
           break;
         case 'cart':
+          cart.set('isChecked', true);
           this.cartView.setElement(this.$el).render();
           break;
       }
