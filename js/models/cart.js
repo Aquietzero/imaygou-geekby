@@ -39,6 +39,8 @@ define(function (require) {
         quantity += post.get('quantity');
       });
 
+      this.set('amount', price);
+
       return {
         price: price,
         quantity: quantity

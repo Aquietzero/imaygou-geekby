@@ -34,10 +34,13 @@
 }
 
 .cart-entry .entry-info {
-  width: 125px;
+  width: 120px;
 }
 
 .cart-entry .entry-quantity {
+}
+.cart-entry .entry-quantity.hide {
+  display: none;
 }
 
 .cart-entry .entry-quantity .quantity {
@@ -46,6 +49,19 @@
   font-weight: bold;
 }
 
+.cart-entry .entry-deletion {
+}
+.cart-entry .entry-deletion.hide {
+  display: none;
+}
+
+.cart-entry .entry-deletion .button {
+  color: white;
+  background-color: #cc0000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 
 .cart .summary {
   border-top: solid 1px #ccc;

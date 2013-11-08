@@ -18,6 +18,7 @@ define(function (require) {
     events: {
       'click .payment-button': 'editContact',
       'click .edit-address': 'editAddress',
+      'click .edit-cart': 'editCart',
       'click .contact-back': 'backToCart',
       'click .address-back': 'backToContact',
       'click .finish-address': 'finishAddress',
@@ -29,6 +30,7 @@ define(function (require) {
 
     initialize: function () {
       this.listenTo(cart, 'reset', this.render);
+      this.listenTo(cart, 'change', this.renderSummary);
       this.state = 'cart';
     },
 
@@ -87,6 +89,21 @@ define(function (require) {
       this.$el.html(this.addressView.render().el);
     },
 
+    editCart: function (e) {
+      var $btn = $(e.currentTarget);
+
+      this.$('.entry-deletion').addClass('hide');
+      this.$('.entry-quantity').addClass('hide');
+
+      if ($btn.hasClass('selected')) {
+        $btn.removeClass('selected');
+        this.$('.entry-quantity').removeClass('hide');
+      } else {
+        $btn.addClass('selected');
+        this.$('.entry-deletion').removeClass('hide');
+      }
+    },
+
     backToCart: function () {
       this.state = 'cart';
       this.renderCart();
@@ -141,7 +158,7 @@ define(function (require) {
       };
 
       $.ajax({
-        url: '/api/order/add',
+        url: '/api/orders/add',
         type: 'post',
         data: {
           order: JSON.stringify(order)
