@@ -5,6 +5,20 @@
         <img src="<%= images[0] %>" alt="" />
       </a>
     </div>
+
+    <% if (post_type === 'NORMAL') { %>
+      <div class="normal-post-price">
+        <p class="price_us">
+          <img src="/img/icon-us@2x.png" alt="" />
+          ￥<%= price_us_in_RMB %>(已包含国际运费)
+        </p>
+        <p class="price_cn">
+          <img src="/img/icon-china@2x.png" alt="" />
+          ￥<%= price_cn %>
+        </p>
+      </div>
+    <% } %>
+
     <div class="title">
       <%= title %>
     </div>
@@ -20,7 +34,7 @@
   <div class="post-bar">
     <div class="badge">
       <p>便宜</p>
-      <p>￥<%= delta %></p>
+      <p><%= delta %></p>
     </div>
     <div class="prices">
       <p>
@@ -48,10 +62,6 @@
     <span>
       <img src="/img/icon-shopped@2x.png" alt="" />
       <%= order_num %>
-    </span>
-    <span>
-      <img src="/img/icon-us@2x.png" alt="" />
-      ￥<%= price_us_in_RMB %>
     </span>
   </div>
   <div class="post-triangle usonly">

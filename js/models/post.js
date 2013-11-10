@@ -30,10 +30,16 @@ define(function (require) {
     },
 
     parse: function (res) {
-      res.item.price_cn = res.item.price_cn.toFixed(0);
-      res.item.price_us = res.item.price_us.toFixed(0);
-      res.item.price_us_in_RMB = res.item.price_us_in_RMB.toFixed(0);
-      return res.item;
+      var item = res.item;
+
+      item.price_cn = item.price_cn.toFixed(0);
+      item.price_us = item.price_us.toFixed(0);
+      item.price_us_in_RMB = item.price_us_in_RMB.toFixed(0);
+
+      var delta = item.price_cn - item.price_us_in_RMB;
+      item.delta = item.delta.toFixed(0);
+
+      return item;
     }
   });
 

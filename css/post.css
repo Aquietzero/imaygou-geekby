@@ -51,6 +51,24 @@
   width: 246px;
 }
 
+.post-main .normal-post-price {
+}
+
+.post-main .normal-post-price .price_us {
+  font-weight: bold;
+}
+
+.post-main .normal-post-price .price_cn {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.post-main .normal-post-price img {
+  vertical-align: baseline;
+  width: 12px;
+  height: 12px;
+}
+
 .post-main .title {
   width: 246px;
   margin: 10px auto;
@@ -115,14 +133,15 @@
   color: #990f0f; 
   position: absolute;
   top: 15px;
-  left: 17px;
+  left: 15px;
+  width: 35px;
   text-align: center;
 }
 
 .post-bar .badge p {
   margin: 0;
   line-height: 1.2em;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .post-bar .prices {
