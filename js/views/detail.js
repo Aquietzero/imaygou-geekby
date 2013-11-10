@@ -70,8 +70,9 @@ define(function (require) {
           var args = self.model.attributes;
           args['cart'] = cart;
           self.$el.html(self.template(args));
+          document.title = args.title + ' - ' + args.sub_title;
         }
-      })
+      });
 
       $(document).scrollTop(0);
 
