@@ -22,7 +22,6 @@
 .post-main {
   position: relative;
   width: 246px;
-  height: 246px;
   padding: 16px;
   margin: auto;
   z-index: 100;
@@ -31,13 +30,12 @@
   position: relative;
   background-color: white;
   width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 
 .post-main .image {
-  position: absolute;
-  bottom: 55px;
+  position: relative;
+  margin: 40px auto;
 }
 
 .post-main .image img {
@@ -46,8 +44,8 @@
 
 .post-main .title {
   width: 246px;
-  position: absolute;
-  bottom: 35px;
+  margin: 10px auto;
+  position: relative;
   text-align: center;
   color: #666;
 }
@@ -57,36 +55,40 @@
 }
 
 .post-main .border.top {
-  width: 246px;
+  width: 279px;
   height: 16px;
   top: 0;
-  left: 16px;
+  left: 0;
   background-image: url('../img/post-top@2x.png');
-  background-size: 246px 16px;
+  background-size: 279px 16px;
+  background-color: #f2f2f2;
 }
 .post-main .border.left {
   width: 16px;
-  height: 278px;
+  height: 100%;
   top: 0;
   left: 0;
   background-image: url('../img/post-left@2x.png');
-  background-size: 16px 278px;
+  background-size: 16px 1px;
+  background-repeat: repeat-y;
 }
 .post-main .border.right {
   width: 16px;
-  height: 278px;
+  height: 100%;
   top: 0;
   right: 0;
   background-image: url('../img/post-right@2x.png');
-  background-size: 16px 278px;
+  background-size: 16px 1px;
+  background-repeat: repeat-y;
 }
 .post-main .border.bottom {
-  width: 246px;
+  width: 279px;
   height: 16px;
   bottom: 0;
-  left: 16px;
+  left: 0;
   background-image: url('../img/post-bottom@2x.png');
-  background-size: 246px 16px;
+  background-size: 279px 16px;
+  background-color: #f2f2f2;
 }
 
 
@@ -95,7 +97,7 @@
   position: relative;
   width: 282px;
   height: 90px;
-  margin: -40px auto 0 auto;
+  margin: -25px auto 0 auto;
   background-image: url('../img/hot-cover@2x.png');
   background-size: 282px 90px;
   z-index: 1000;
