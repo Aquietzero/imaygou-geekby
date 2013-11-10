@@ -103,6 +103,11 @@
   color: #999;
 }
 
+.post-detail .buy a {
+  color: #999;
+  text-decoration: underline;
+}
+
 .post-detail .buy .operations {
   padding: 10px 0;
   text-align: right;
