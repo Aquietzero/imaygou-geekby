@@ -1,5 +1,14 @@
+.banner {
+  text-align: center;
+}
+
+.banner img {
+  width: 320px;
+}
+
 .slogan {
   text-align: center;
+  margin: 10px auto;
 }
 
 .slogan img {
