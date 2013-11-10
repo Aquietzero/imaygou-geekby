@@ -1,7 +1,16 @@
-.address {
+.address-input {
+  width: 240px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 75px auto;
+  text-align: left;
+  box-shadow: 0 0 8px #ddd;
+  -moz-box-shadow: 0 0 8px #ddd;
+  -webkit-box-shadow: 0 0 8px #ddd;
+  background-color: #fff;
 }
 
-.address .select-wrapper {
+.address-input .select-wrapper {
   width: 240px;
   border: none;
   background: white;
@@ -9,7 +18,7 @@
   border-bottom: solid 1px #ddd;
 }
 
-.address select {
+.address-input select {
   background: transparent;
   -webkit-appearance: none;
   border: none;
@@ -18,17 +27,17 @@
   color: #385fd8;
 }
 
-.address .select-wrapper.province {
+.address-input .select-wrapper.province {
   background: url('../img/province-dropdown@2x.png') no-repeat right white;
   background-size: 76px 34.5px;
 }
 
-.address .select-wrapper.city {
+.address-input .select-wrapper.city {
   background: url('../img/city-dropdown@2x.png') no-repeat right white;
   background-size: 76px 34.5px;
 }
 
-.address .select-wrapper.district {
+.address-input .select-wrapper.district {
   background: url('../img/district-dropdown@2x.png') no-repeat right white;
   background-size: 76px 34.5px;
 }

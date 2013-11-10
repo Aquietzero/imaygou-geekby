@@ -51,6 +51,8 @@ define(function (require) {
           var $option = $('<option value="' + city + '">' + city + '</options>');
           self.$('#city-selection').append($option);
         }, self);
+
+        self.loadDistricts();
       });
     },
 
