@@ -1,11 +1,9 @@
 .post-detail {
-  width: 258px;
-  padding: 10px;
+  position: relative;
+  width: 246px;
+  padding: 16px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 8px #ccc;
-  -moz-box-shadow: 0 0 8px #ccc;
-  -webkit-box-shadow: 0 0 8px #ccc;
   margin: auto;
 }
 
@@ -15,6 +13,46 @@
 
 .post-detail p {
   margin: 0;
+}
+
+.post-detail .border {
+  position: absolute;
+  background-color: #f2f2f2;
+}
+
+.post-detail .border.top {
+  width: 279px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background-image: url('../img/post-top@2x.png');
+  background-size: 279px 16px;
+}
+.post-detail .border.left {
+  width: 16px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('../img/post-left@2x.png');
+  background-size: 16px 1px;
+  background-repeat: repeat-y;
+}
+.post-detail .border.right {
+  width: 16px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-image: url('../img/post-right@2x.png');
+  background-size: 16px 1px;
+  background-repeat: repeat-y;
+}
+.post-detail .border.bottom {
+  width: 279px;
+  height: 16px;
+  bottom: 0;
+  left: 0;
+  background-image: url('../img/post-bottom@2x.png');
+  background-size: 279px 16px;
 }
 
 .post-detail .small-icon {

@@ -52,6 +52,7 @@
 
 .post-main .border {
   position: absolute;
+  background-color: #f2f2f2;
 }
 
 .post-main .border.top {
@@ -61,7 +62,6 @@
   left: 0;
   background-image: url('../img/post-top@2x.png');
   background-size: 279px 16px;
-  background-color: #f2f2f2;
 }
 .post-main .border.left {
   width: 16px;
@@ -88,7 +88,6 @@
   left: 0;
   background-image: url('../img/post-bottom@2x.png');
   background-size: 279px 16px;
-  background-color: #f2f2f2;
 }
 
 
