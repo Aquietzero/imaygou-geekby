@@ -78,9 +78,18 @@ define(function (require) {
       this.$('.entries').append(entryView.render().el);
     },
 
-    editContact: function () {
-      this.state = 'contact';
-      this.renderContact();
+    editContact: function (e) {
+      var $btn = $(e.currentTarget);
+
+      if (!cart.get('posts').length) {
+        $btn.html('去逛逛');
+        setTimeout(function () {
+          window.location = '/';
+        }, 1000);
+      } else {
+        this.state = 'contact';
+        this.renderContact();
+      }
     },
 
     editAddress: function () {
