@@ -8,9 +8,12 @@
 
     <% if (post_type === 'NORMAL') { %>
       <div class="normal-post-price">
+        <div class="cheap-badge">
+          <p><%= delta %></p>
+        </div>
         <p class="price_us">
           <img src="/img/icon-us@2x.png" alt="" />
-          ￥<%= price_us_in_RMB %>(已包含国际运费)
+          ￥<%= price_us_in_RMB %>(含国际运费)
         </p>
         <p class="price_cn">
           <img src="/img/icon-china@2x.png" alt="" />
@@ -22,6 +25,19 @@
     <div class="title">
       <%= title %>
     </div>
+
+    <% if (post_type === 'NORMAL') { %>
+      <div class="post-info">
+        <span>
+          <img src="/img/icon-view@2x.png" alt="" />
+          <%= view_num %>
+        </span>
+        <span>
+          <img src="/img/icon-shopped@2x.png" alt="" />
+          <%= order_num %>
+        </span>
+      </div>
+    <% } %>
   </div>
   
   <div class="border left"></div>
@@ -54,16 +70,6 @@
 <% } %>
 
 <% if (post_type === 'NORMAL') { %>
-  <div class="post-info">
-    <span>
-      <img src="/img/icon-view@2x.png" alt="" />
-      <%= view_num %>
-    </span>
-    <span>
-      <img src="/img/icon-shopped@2x.png" alt="" />
-      <%= order_num %>
-    </span>
-  </div>
-  <div class="post-triangle usonly">
+  <div class="post-triangle cheap">
   </div>
 <% } %>

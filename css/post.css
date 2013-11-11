@@ -44,7 +44,7 @@
 
 .post-main .image {
   position: relative;
-  margin: 40px auto;
+  margin: 40px auto 20px auto;
 }
 
 .post-main .image img {
@@ -52,6 +52,13 @@
 }
 
 .post-main .normal-post-price {
+  background: #f8f8f8;
+  padding: 10px 0 15px 10px;
+}
+
+.post-main .normal-post-price p {
+  padding: 0 0 0 50px;
+  line-height: 1.5em;
 }
 
 .post-main .normal-post-price .price_us {
@@ -62,15 +69,29 @@
   color: #aaa;
 }
 
+.post-main .normal-post-price .cheap-badge {
+  width: 40px;
+  height: 50px;
+  float: left;
+  background-image: url('../img/cheap-badge.png');
+  background-size: 40px 50px;
+}
+
+.post-main .normal-post-price .cheap-badge p {
+  font-size: 0.7em;
+  padding: 20px 5px;
+  color: white;
+}
+
 .post-main .normal-post-price img {
-  vertical-align: baseline;
-  width: 12px;
-  height: 12px;
+  vertical-align: text-top;
+  width: 17px;
+  height: 17px;
 }
 
 .post-main .title {
   width: 246px;
-  margin: 10px auto;
+  margin: 10px auto 0 auto;
   position: relative;
   text-align: center;
   color: #666;
@@ -157,8 +178,9 @@
 }
 
 .post-bar .prices img {
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
+  vertical-align: text-top;
 }
 
 .post-bar .rob-button {
@@ -175,7 +197,7 @@
 
 /* post info */
 .post-info {
-  position: absolute;
+  padding: 0 0 10px 0;
   vertical-align: middle;
   color: #999;
   bottom: 5px;
@@ -185,8 +207,9 @@
 }
 
 .post-info img {
-  width: 12px;
-  height: 12px;
+  vertical-align: text-top;
+  width: 17px;
+  height: 17px;
 }
 
 
@@ -200,14 +223,20 @@
 }
 
 .post-triangle.hot {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   background-image: url('../img/triangle-hot@2x.png');
-  background-size: 48px 48px;
+  background-size: 58px 58px;
 }
 .post-triangle.usonly {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   background-image: url('../img/triangle-usonly@2x.png');
-  background-size: 48px 48px;
+  background-size: 58px 58px;
+}
+.post-triangle.cheap {
+  width: 58px;
+  height: 58px;
+  background-image: url('../img/triangle-cheap@2x.png');
+  background-size: 58px 58px;
 }
