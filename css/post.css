@@ -143,7 +143,7 @@
   position: relative;
   width: 282px;
   height: 90px;
-  margin: -25px auto 0 auto;
+  margin: -130px auto 70px auto;
   background-image: url('../img/hot-cover@2x.png');
   background-size: 282px 90px;
   z-index: 1000;
@@ -197,7 +197,7 @@
 
 /* post info */
 .post-info {
-  padding: 0 0 10px 0;
+  padding: 0;
   vertical-align: middle;
   color: #999;
   bottom: 5px;
@@ -210,6 +210,10 @@
   vertical-align: text-top;
   width: 17px;
   height: 17px;
+}
+
+.post-info.hot {
+  margin-top: 85px;
 }
 
 

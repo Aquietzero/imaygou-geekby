@@ -27,7 +27,10 @@
     </div>
 
     <% if (post_type === 'NORMAL') { %>
-      <div class="post-info">
+      <div class="post-info normal">
+    <% } else if (post_type === 'HOT') { %>
+      <div class="post-info hot">
+    <% } %>
         <span>
           <img src="/img/icon-view@2x.png" alt="" />
           <%= view_num %>
@@ -37,7 +40,6 @@
           <%= order_num %>
         </span>
       </div>
-    <% } %>
   </div>
   
   <div class="border left"></div>
