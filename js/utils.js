@@ -11,6 +11,35 @@ define(function (require) {
   //       foo: 123,
   //       bar: 234
   //     }
+  function androidURLFixed() {
+    var href = window.location.href;
+
+    // for android share. remove useless query string.
+    var url_modified = false;
+    var url = href;
+
+    if (href.split('?').length > 1) {
+      var query = _.last(href.split('?'));
+    }
+
+    if (query) {
+      url_modified = true;
+      url = _.first(url.split('?'));
+    }
+
+    // for android share. replace `%23` to `#`
+    if (url.search('%23') >= 0) {
+      url_modified = true;
+      url = url.replace('%23', '#');
+    }
+
+    if (url_modified) {
+      return url;
+    } else {
+      return false;
+    }
+  }
+
   function getQuery() {
     var a = (window.location.search.substr(1).split('&'));
     if (a === "") {
@@ -50,6 +79,7 @@ define(function (require) {
   }
 
   return {
+    androidURLFixed: androidURLFixed,
     getQuery: getQuery,
     logPostVisit: logPostVisit,
     logItemVisit: logItemVisit
