@@ -38,6 +38,17 @@ define(function (require) {
   var utils    = require('utils');
   var log      = require('log');
 
+  // for android share.
+  var href = window.location.href;
+
+  if (href.split('?').length > 1) {
+    var query = _.last(href.split('?'));
+  }
+
+  if (query) {
+    window.location = _.first(href.split('?'));
+  }
+
   // $.ajaxSetup({cache: false});
 
   // log ajax requests
