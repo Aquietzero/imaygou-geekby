@@ -50,10 +50,12 @@
 
 <% if (post_type === 'HOT') { %>
   <div class="post-bar">
-    <div class="badge">
-      <p>便宜</p>
-      <p><%= delta %></p>
-    </div>
+    <% if (price_cn > 0) { %>
+      <div class="badge">
+        <p>便宜</p>
+        <p><%= delta %></p>
+      </div>
+    <% } %>
     <div class="prices">
       <p>
         <img src="/img/icon-us@2x.png" alt="" />
