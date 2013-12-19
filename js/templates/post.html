@@ -8,9 +8,11 @@
 
     <% if (post_type === 'NORMAL') { %>
       <div class="normal-post-price">
-        <div class="cheap-badge">
-          <p><%= delta %></p>
-        </div>
+        <% if (price_cn > 0) { %>
+          <div class="cheap-badge">
+            <p><%= delta %></p>
+          </div>
+        <% } %>
         <p class="price_us">
           <img src="/img/icon-us@2x.png" alt="" />
           ￥<%= price_us_in_RMB %>(含国际运费)
