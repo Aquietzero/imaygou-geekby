@@ -15,10 +15,12 @@
           <img src="/img/icon-us@2x.png" alt="" />
           ￥<%= price_us_in_RMB %>(含国际运费)
         </p>
-        <p class="price_cn">
-          <img src="/img/icon-china@2x.png" alt="" />
-          ￥<del><%= price_cn %></del> <%= price_ref[0].name %>价
-        </p>
+        <% if (price_cn > 0) { %>
+          <p class="price_cn">
+            <img src="/img/icon-china@2x.png" alt="" />
+            ￥<del><%= price_cn %></del> <%= price_ref[0].name %>价
+          </p>
+        <% } %>
       </div>
     <% } %>
 
