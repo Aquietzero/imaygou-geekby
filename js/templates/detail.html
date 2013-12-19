@@ -31,13 +31,15 @@
       <span>￥<%= price_us_in_RMB %></span>
       <span>货源<a href="<%= product_src.url %>"><%= product_src.name %></a></span>
     </div>
-    <div>
-      <img class="small-icon" src="/img/icon-china@2x.png">
-      <% _.each(price_ref, function (ref) { %>
-        <span>￥<%= ref.price %></span>
-        <span>参考价<a href="<%= ref.url%>"><%= ref.name %></a></span>
-      <% }) %>
-    </div>
+    <% if (price_ref.length > 0) { %>
+      <div>
+        <img class="small-icon" src="/img/icon-china@2x.png">
+        <% _.each(price_ref, function (ref) { %>
+          <span>￥<%= ref.price %></span>
+          <span>参考价<a href="<%= ref.url%>"><%= ref.name %></a></span>
+        <% }) %>
+      </div>
+    <% } %>
     <div class="operations">
       <span class="button buy-button">购买</span>
       <!--

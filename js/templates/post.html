@@ -59,10 +59,12 @@
         <img src="/img/icon-us@2x.png" alt="" />
         ￥<%= price_us_in_RMB %>
       </p>
-      <p>
-        <img src="/img/icon-china@2x.png" alt="" />
-        ￥<del><%= price_cn %></del>
-      </p>
+      <% if (price_cn > 0) { %>
+        <p>
+          <img src="/img/icon-china@2x.png" alt="" />
+          ￥<del><%= price_cn %></del>
+        </p>
+      <% } %>
     </div>
     <div class="rob-button">
     </div>
