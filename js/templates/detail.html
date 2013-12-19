@@ -31,7 +31,7 @@
       <span>￥<%= price_us_in_RMB %></span>
       <span>货源<a href="<%= product_src.url %>"><%= product_src.name %></a></span>
     </div>
-    <% if (price_ref.length > 0) { %>
+    <% if (price_cn > 0) { %>
       <div>
         <img class="small-icon" src="/img/icon-china@2x.png">
         <% _.each(price_ref, function (ref) { %>
